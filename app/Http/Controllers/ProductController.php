@@ -52,7 +52,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $product = $this->productRepo->create($request->all());
+
+        return $product;
     }
 
     /**

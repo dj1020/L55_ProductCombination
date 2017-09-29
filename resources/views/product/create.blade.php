@@ -106,6 +106,7 @@
                         <thead>
                         <tr>
                             <th>ID</th>
+                            <th>產品 Barcode</th>
                             <th>產品名稱</th>
                             <th>顏色</th>
                             <th>尺寸</th>
@@ -115,9 +116,10 @@
                         <tbody>
                         <tr v-for="product in products">
                             <td>@{{ product.id }}</td>
-                            <td>@{{ product.name }}</td>
-                            <td>@{{ product.color }}</td>
-                            <td>@{{ product.size }}</td>
+                            <td>@{{ product.product_id }}</td>
+                            <td>@{{ product.name }} (@{{ product.combination_code }})</td>
+                            <td>@{{ product.color }} (@{{ product.color_code }})</td>
+                            <td>@{{ product.size }} (@{{ product.size_code }})</td>
                             <td>
                                 <button class="btn btn-sm btn-primary">修改</button>
                                 <button class="btn btn-sm btn-danger">刪除</button>
