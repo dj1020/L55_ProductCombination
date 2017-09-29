@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Entities\Product::class, function (Faker $faker) {
     $input = [
-        'product_name'     => $faker->word,
+        'name'             => $faker->word,
         'combination_code' => $faker->word,
         'color'            => $faker->colorName,
         'size'             => $faker->randomElement(['S', 'M', 'L']),

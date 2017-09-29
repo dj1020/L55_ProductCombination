@@ -18,6 +18,6 @@ class ProductRepo extends BaseRepo
 
     public function all()
     {
-        return $this->model->all();
+        return $this->model->latest()->get();
     }
 }

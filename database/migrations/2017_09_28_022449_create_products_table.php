@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('product_name')->unique()->comment('產品名稱');
+            $table->string('name')->unique()->comment('產品名稱');
             $table->string('product_id')->unique()->comment('產品條碼: 組合-顏色-尺寸');
             $table->string('combination_code')->comment('產品組合 barcode');
             $table->string('color')->comment('顏色');
