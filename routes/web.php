@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('product', 'ProductController');
+
+Route::get('/upload', 'UploadController@index');
+Route::post('/upload', 'UploadController@store')->name('upload.store');
+Route::patch('/upload', 'UploadController@store')->name('upload.store');
